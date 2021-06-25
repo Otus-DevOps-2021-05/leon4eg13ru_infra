@@ -21,3 +21,7 @@ Host bastion
 
 testapp_IP = 178.154.253.251
 testapp_port = 9292
+
+Запуск автоматического деплоя приложения с помощью команды:
+
+./deploy_redditapp.sh
