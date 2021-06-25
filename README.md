@@ -19,5 +19,5 @@ Host bastion
         User appuser
         IdentityFile /home/leon4eg/.ssh/appuser
 
-testapp_IP = 178.154.226.14
+testapp_IP = 178.154.253.251
 testapp_port = 9292
