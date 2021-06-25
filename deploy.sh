@@ -1,7 +1,7 @@
 #!/bin/bash
-# копирование кода приложения
+echo 'копирование кода приложения'
 git clone -b monolith https://github.com/express42/reddit.git
-# установка зависимостей
+echo 'установка зависимостей'
 cd reddit && bundle install
-# запуск приложения
+echo 'запуск приложения'
 puma -d
