@@ -18,3 +18,10 @@ Host bastion
         HostName 178.154.254.222
         User appuser
         IdentityFile /home/leon4eg/.ssh/appuser
+
+testapp_IP = 178.154.253.251
+testapp_port = 9292
+
+Запуск автоматического деплоя приложения с помощью команды:
+
+./deploy_redditapp.sh
