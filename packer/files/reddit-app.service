@@ -1,13 +1,14 @@
 [Unit]
 Description=Reddit App
-Requires=network.target
+Wants=basic.target
+After=basic.target network.target
 
 [Service]
-Type=notify
-WatchdogSec=10
 WorkingDirectory=/app/reddit/
-ExecStart=/usr/local/bin/puma -C /app/reddit/puma.rb
-Restart=always
+ExecStart=/usr/bin/bundle exec ruby app.rb -o 0.0.0.0 -e production -p 9292
+KillMode=process
+Restart=on-failure
+RestartSec=42s
 
 [Install]
 WantedBy=multi-user.target

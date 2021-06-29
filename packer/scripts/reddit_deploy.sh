@@ -7,6 +7,7 @@ apt-get install -y ruby-full ruby-bundler build-essential mongodb-org git
 systemctl daemon-reload
 systemctl start mongod
 systemctl enable mongod
+systemctl enable reddit-app
 mkdir /app
 cd /app
 git clone -b monolith https://github.com/express42/reddit.git

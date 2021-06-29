@@ -18,6 +18,11 @@
     ],
     "provisioners": [
         {
+            "type": "file",
+            "source": "files/reddit-app.service",
+            "destination": "/etc/systemd/system/"
+        },
+        {
             "type": "shell",
             "script": "scripts/reddit_deploy.sh",
             "execute_command": "sudo {{.Path}}"
