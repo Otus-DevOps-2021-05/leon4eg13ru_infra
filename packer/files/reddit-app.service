@@ -1,0 +1,13 @@
+[Unit]
+Description=Reddit App
+Requires=network.target
+
+[Service]
+Type=notify
+WatchdogSec=10
+WorkingDirectory=/app/reddit/
+ExecStart=/usr/local/bin/puma -C /app/reddit/puma.rb
+Restart=always
+
+[Install]
+WantedBy=multi-user.target
