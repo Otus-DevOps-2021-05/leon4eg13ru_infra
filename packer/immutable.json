@@ -6,7 +6,7 @@
             "folder_id": "{{user `folder_id`}}",
             "use_ipv4_nat": true,
             "source_image_family": "{{user `source_image`}}",
-            "image_name": "reddit-full",
+            "image_name": "reddit-full-{{timestamp}}",
             "image_family": "{{user `image_family`}}",
             "ssh_username": "{{user `ssh_username`}}",
             "platform_id": "standard-v1",
@@ -20,7 +20,7 @@
         {
             "type": "file",
             "source": "files/reddit-app.service",
-            "destination": "/etc/systemd/system/"
+            "destination": "/tmp/"
         },
         {
             "type": "shell",
