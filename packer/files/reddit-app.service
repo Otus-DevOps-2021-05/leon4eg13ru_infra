@@ -1,0 +1,14 @@
+[Unit]
+Description=Reddit App
+Wants=basic.target
+After=basic.target network.target
+
+[Service]
+WorkingDirectory=/app/reddit/
+ExecStart=/usr/bin/bundle exec ruby app.rb -o 0.0.0.0 -e production -p 9292
+KillMode=process
+Restart=on-failure
+RestartSec=42s
+
+[Install]
+WantedBy=multi-user.target
