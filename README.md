@@ -25,3 +25,9 @@ testapp_port = 9292
 Запуск автоматического деплоя приложения с помощью команды:
 
 ./deploy_redditapp.sh
+
+## HW_8
+
+- Создан ansible playbook
+- Cоздан и заполнен файл inventory
+- Создан файл локальной конфигурации ansible.cfg
