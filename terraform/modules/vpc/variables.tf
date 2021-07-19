@@ -1,5 +1,6 @@
 variable "subnet_name" {
   description = "Sabnet name"
+  default     = "app_subnet"
 }
 variable zone {
   description = "Zone"

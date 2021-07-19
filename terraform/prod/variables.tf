@@ -31,3 +31,15 @@ variable db_disk_image {
   description = "Disk image for reddit app"
   default     = "reddit-db-base"
 }
+variable "bucket_name" {
+  description = ""
+}
+variable "path_to_state_file" {
+  description = ""
+}
+variable "storage_access_key" {
+  description = ""
+}
+variable "storage_secret_key" {
+  description = ""
+}
