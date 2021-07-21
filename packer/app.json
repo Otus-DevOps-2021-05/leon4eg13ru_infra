@@ -1,0 +1,26 @@
+{
+    "builders": [
+        {
+            "type": "yandex",
+            "service_account_key_file": "{{user `key_file`}}",
+            "folder_id": "{{user `folder_id`}}",
+            "use_ipv4_nat": true,
+            "source_image_family": "{{user `source_image`}}",
+            "image_name": "reddit-app-{{timestamp}}",
+            "image_family": "reddit-app-base",
+            "ssh_username": "{{user `ssh_username`}}",
+            "platform_id": "standard-v1",
+            "instance_cores": 2,
+            "instance_mem_gb": 2,
+            "disk_size_gb": 10,
+            "disk_type": "network-ssd"
+        }
+    ],
+    "provisioners": [
+        {
+            "type": "shell",
+            "script": "scripts/install_ruby.sh",
+            "execute_command": "sudo {{.Path}}"
+        }
+    ]
+}

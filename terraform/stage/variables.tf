@@ -23,12 +23,11 @@ variable "service_account_key_file" {
 variable "private_key_file" {
   description = "key.pem"
 }
-variable "access_key" {
-  description = "access key id"
+variable app_disk_image {
+  description = "Disk image for reddit app"
+  default     = "reddit-app-base"
 }
-variable "secret_key" {
-  description = "secret key for access"
-}
-variable "bucket_name" {
-  description = "Name of created bucket"
+variable db_disk_image {
+  description = "Disk image for reddit app"
+  default     = "reddit-db-base"
 }
