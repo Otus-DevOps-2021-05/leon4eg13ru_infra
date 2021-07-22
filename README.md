@@ -52,3 +52,13 @@ someinternalhost_IP = 10.128.0.22
 - Выполнена автоматизация создания ВМ с рабочим приложением в сценарии create-reddit-vm.sh
  + Для запуска виртуальной машины:
  `./config-scripts/create-reddit-vm.sh`
+
+## HW_8
+
+- Создан ansible playbook
+- Cоздан и заполнен файл inventory
+- Создан файл локальной конфигурации ansible.cfg
+- Создан bash-скрипт, создающий inventory.json из файла состояния terraform.tfstate
+
+Для выполнения скрипта необходимо установить настроить S3cmd (консольный клиент для сервисов,
+поддерживающими HTTP API Amazon S3) и JQ, обработчик JSON-файлов
