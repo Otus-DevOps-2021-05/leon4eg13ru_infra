@@ -17,8 +17,6 @@
 
     - name: Update repositories cache and install git
       become: true
-      become_method: sudo
-      become_user: root
       apt:
         update_cache: yes
         pkg:
