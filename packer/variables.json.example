@@ -1,5 +1,5 @@
 {
-    "key_file": "./key.json.example",
+    "key_file": "packer/key.json.example",
     "folder_id": "123456789qwerty",
     "source_image": "bubuntu-2077",
     "image_family": "app-image-name",
