@@ -1,6 +1,6 @@
 ---
 - name: Create users
-  hosts: all
+  hosts: a
   become: true
 
   vars_files:
