@@ -1,0 +1,31 @@
+---
+- name: Configure Ruby and Bundler
+  hosts: all
+  become: true
+
+  tasks:
+
+  - name: Update repositories cache and install packages
+    apt:
+      update_cache: yes
+      pkg:
+        - git
+        - ruby-full
+        - ruby-bundler
+        - build-essential
+        - python3-pip
+        - firewalld
+      state: present
+
+  - name: install the package, force upgrade
+    pip:
+      name:
+       - pip
+      executable: pip3
+      state: latest
+
+  - name: permit traffic in default zone for http service
+    firewalld:
+      service: http
+      permanent: yes
+      state: enabled
