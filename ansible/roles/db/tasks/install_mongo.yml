@@ -1,0 +1,26 @@
+---
+  - name: Add an Apt signing key, uses whichever key is at the URL
+    apt_key:
+      url: https://www.mongodb.org/static/pgp/server-3.2.asc
+      state: present
+    tags: install
+
+  - name: Add specified repository into sources list
+    apt_repository:
+      repo: deb http://repo.mongodb.org/apt/ubuntu xenial/mongodb-org/3.2 multiverse
+      state: present
+    tags: install
+
+  - name: Update repositories cache and install mongodb-org
+    apt:
+      update_cache: yes
+      pkg:
+        - mongodb-org
+      state: present
+    tags: install
+
+  - name: Enable service mongod
+    systemd:
+      name: mongod
+      enabled: yes
+    tags: install
